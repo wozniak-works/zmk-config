@@ -36,7 +36,7 @@ As such, those are in use within the default layer at this time.*/
 &mt GRAVE ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T                          &kp Y  &kp U          &kp I      &kp O       &kp P          &kp BACKSPACE
 &kp LCTRL         &kp A  &kp S  &kp D  &kp F         &kp G                          &kp H  &kp J          &kp K      &kp L       &kp SEMICOLON  &kp SQT
 &kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V         &kp B                          &kp N  &kp M          &kp COMMA  &kp PERIOD  &kp SLASH      &kp DELETE
-&kp LSHFT         &kp Z  &kp X  &mo 2  &kp LEFT_ALT  &mo 1  &kp SPACE    &kp ENTER  &mo 3  &kp RIGHT_ALT  &kp COMMA  &kp PERIOD  &kp SLASH      &kp RET
+&kp LSHFT         &kp Z  &kp X  &mo 3  &kp LEFT_ALT  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_ALT  &kp COMMA  &kp PERIOD  &kp SLASH      &kp RET
 &none             &none  &none  &none  &none         &none  &none        &none      &none  &none          &none      &none       &none          &none
             >;
         };
@@ -58,7 +58,7 @@ As such, those are in use within the default layer at this time.*/
             >;
         };
 
-        raise_layer {
+        Num_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |       |       |       |       |       |       |                                    |       |       |       |       |       |       |
             // |   `   |   1   |   2   |   3   |   4   |   5   |                                    |   6   |   7   |   8   |   9   |   0   |  DEL  |
@@ -67,11 +67,11 @@ As such, those are in use within the default layer at this time.*/
             // |       |       |       |       |       |       |       |                    |       |       |       | NEXT  | VOL-  | VOL+  | PLAY  |
 
             bindings = <
-&trans     &trans  &trans  &trans  &trans   &trans                     &kp COMMA   &kp N7        &kp N8        &kp N9        &kp PLUS       &kp ASTRK
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                     &kp N0      &kp N4        &kp N5        &kp NUMBER_6  &kp MINUS      &kp KP_DIVIDE
-&trans     &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &kp KP_DOT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RS(EQUAL)  &trans
-&trans     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans    &trans  &trans      &trans        &trans        &trans        &trans         &trans
-&trans     &trans  &trans  &trans  &trans   &trans   &trans    &trans  &trans      &trans        &trans        &trans        &trans         &trans
+&trans        &trans        &trans     &trans          &trans  &trans                    &kp COMMA   &kp N7        &kp N8        &kp N9        &kp PLUS       &kp ASTRK
+&kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans  &trans                    &kp N0      &kp N4        &kp N5        &kp NUMBER_6  &kp MINUS      &kp KP_DIVIDE
+&trans        &trans        &trans     &trans          &trans  &trans                    &kp KP_DOT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RS(EQUAL)  &trans
+&trans        &trans        &trans     &trans          &trans  &trans  &trans    &trans  &trans      &trans        &trans        &trans        &trans         &trans
+&trans        &trans        &trans     &trans          &trans  &trans  &trans    &trans  &trans      &trans        &trans        &trans        &trans         &trans
             >;
         };
 
@@ -89,6 +89,16 @@ As such, those are in use within the default layer at this time.*/
 &bt BT_NXT  &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans        &trans                              &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRD  &trans
 &bt BT_PRV  &trans        &trans        &trans        &trans        &trans        &kp LBRC    &kp RBRC  &trans           &trans           &trans           &trans           &trans           &trans
 &trans      &trans        &trans        &trans        &trans        &trans        &trans      &trans    &trans           &trans           &trans           &trans           &trans           &trans
+            >;
+        };
+
+        Func_layer {
+            bindings = <
+&trans    &trans    &trans     &trans      &trans  &trans                    &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans
+&kp LWIN  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans  &trans                    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans    &trans    &trans     &trans      &trans  &trans                    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+&trans    &trans    &trans     &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans    &trans    &trans     &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
             >;
         };
     };
