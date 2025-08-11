@@ -26,7 +26,7 @@ As such, those are in use within the default layer at this time.*/
         left_wind: left_wind {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LG(LEFT_ARROW))>;
+            bindings = <&kp LG(LC(LEFT_ARROW))>;
             label = "LEFT_WIND";
         };
 
