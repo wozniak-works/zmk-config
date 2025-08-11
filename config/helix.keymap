@@ -54,7 +54,7 @@ As such, those are in use within the default layer at this time.*/
                 <&macro_release>,
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
-                <&tog 0>;
+                <&tog 4>;
 
             label = "ALT_TAB";
         };
