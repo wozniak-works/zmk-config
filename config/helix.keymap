@@ -43,6 +43,20 @@ As such, those are in use within the default layer at this time.*/
             bindings = <&kp LS(LG(S))>;
             label = "PRNT_SCRN";
         };
+
+        Alt_tab: Alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&tog 0>;
+
+            label = "ALT_TAB";
+        };
     };
 
     behaviors {
@@ -51,6 +65,15 @@ As such, those are in use within the default layer at this time.*/
             label = "LAYER";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 2>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <11 10>;
         };
     };
 
@@ -68,7 +91,7 @@ As such, those are in use within the default layer at this time.*/
             bindings = <
 &mt GRAVE ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T                          &kp Y   &kp U          &kp I      &kp O       &kp P          &kp BACKSPACE
 &kp LCTRL         &kp A  &kp S  &kp D  &kp F         &kp G                          &kp H   &kp J          &kp K      &kp L       &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V         &kp B                          &kp N   &kp M          &kp COMMA  &kp PERIOD  &kp SLASH      &kp DELETE
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V         &kp B                          &kp N   &kp M          &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
 &none             &none  &none  &mo 5  &kp LEFT_ALT  &mo 4  &kp SPACE    &kp ENTER  &layer  &kp RIGHT_ALT  &mo 3      &none       &none          &none
 &none             &none  &none  &none  &none         &none  &none        &none      &none   &none          &none      &none       &none          &none
             >;
@@ -120,11 +143,11 @@ As such, those are in use within the default layer at this time.*/
 
         Nav_layer {
             bindings = <
-&kp LA(F4)  &trans    &left_wind      &right_wind   &kp LA(TAB)  &trans                        &trans          &trans           &trans            &trans             &trans      &trans
-&trans      &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT    &prnt_scrn                    &kp C_PREVIOUS  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE  &kp K_VOLUME_DOWN  &kp C_NEXT  &trans
-&trans      &trans    &trans          &trans        &trans       &trans                        &trans          &trans           &trans            &trans             &trans      &trans
-&trans      &trans    &trans          &trans        &trans       &trans      &trans    &trans  &trans          &trans           &trans            &trans             &trans      &trans
-&trans      &trans    &trans          &trans        &trans       &trans      &trans    &trans  &trans          &trans           &trans            &trans             &trans      &trans
+&kp LA(F4)  &trans    &left_wind      &right_wind   &tog 7     &trans                        &trans          &trans           &trans            &trans             &trans      &trans
+&trans      &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &prnt_scrn                    &kp C_PREVIOUS  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE  &kp K_VOLUME_DOWN  &kp C_NEXT  &trans
+&trans      &trans    &trans          &trans        &trans     &trans                        &trans          &trans           &trans            &trans             &trans      &trans
+&trans      &trans    &trans          &trans        &trans     &trans      &trans    &trans  &trans          &trans           &trans            &trans             &trans      &trans
+&trans      &trans    &trans          &trans        &trans     &trans      &trans    &trans  &trans          &trans           &trans            &trans             &trans      &trans
             >;
         };
 
@@ -152,6 +175,16 @@ As such, those are in use within the default layer at this time.*/
 &bt BT_NXT  &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans        &trans                              &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRD  &trans
 &bt BT_PRV  &trans        &trans        &trans        &trans        &trans        &kp LBRC    &kp RBRC  &trans           &trans           &trans           &trans           &trans           &trans
 &trans      &trans        &trans        &trans        &trans        &trans        &trans      &trans    &trans           &trans           &trans           &trans           &trans           &trans
+            >;
+        };
+
+        Alt-tab {
+            bindings = <
+&trans  &trans  &trans  &kp LS(TAB)  &kp TAB  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans   &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans   &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans   &Alt_tab  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans   &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
