@@ -107,9 +107,9 @@ As such, those are in use within the default layer at this time.*/
             // |       |       |       |       |       |       |       |                    |       |       |       | NEXT  | VOL-  | VOL+  | PLAY  |
 
             bindings = <
-&trans  &trans    &trans        &trans     &trans      &trans                    &kp COMMA  &kp N7        &kp N8        &kp N9        &kp PLUS   &kp ASTRK
-&trans  &kp LCMD  &kp LEFT_ALT  &kp LCTRL  &kp LSHIFT  &trans                    &kp N0     &kp N4        &kp N5        &kp NUMBER_6  &kp MINUS  &kp KP_DIVIDE
-&trans  &trans    &trans        &trans     &trans      &trans                    &kp DOT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans
+&trans  &trans    &trans        &trans     &trans      &trans                    &kp COMMA  &kp N7        &kp N8        &kp N9        &kp PLUS   &trans
+&trans  &kp LCMD  &kp LEFT_ALT  &kp LCTRL  &kp LSHIFT  &trans                    &kp N0     &kp N4        &kp N5        &kp NUMBER_6  &kp MINUS  &kp KP_ASTERISK
+&trans  &trans    &trans        &trans     &trans      &trans                    &kp DOT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp SLASH
 &trans  &trans    &trans        &trans     &trans      &trans  &trans    &trans  &trans     &trans        &trans        &trans        &trans     &trans
 &trans  &trans    &trans        &trans     &trans      &trans  &trans    &trans  &trans     &trans        &trans        &trans        &trans     &trans
             >;
@@ -154,11 +154,11 @@ As such, those are in use within the default layer at this time.*/
 
         Nav_layer {
             bindings = <
-&kp LA(F4)  &trans              &left_wind      &right_wind       &tog 4         &trans                               &trans          &trans           &kp C_MUTE        &trans             &trans      &trans
-&trans      &kp LEFT            &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT      &prnt_scrn                           &kp C_PREVIOUS  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE  &kp K_VOLUME_DOWN  &kp C_NEXT  &trans
-&trans      &kp LG(LEFT_ARROW)  &trans          &kp LG(UP_ARROW)  &kp LG(RIGHT)  &kp LS(LG(GRAVE))                    &trans          &trans           &trans            &trans             &trans      &trans
-&trans      &trans              &trans          &trans            &trans         &trans             &trans    &trans  &trans          &trans           &trans            &trans             &trans      &trans
-&trans      &trans              &trans          &trans            &trans         &trans             &trans    &trans  &trans          &trans           &trans            &trans             &trans      &trans
+&kp LA(F4)  &trans              &left_wind      &right_wind       &tog 4         &trans                               &trans          &trans             &kp C_MUTE        &trans           &trans        &trans
+&trans      &kp LEFT            &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT      &prnt_scrn                           &trans          &kp LEFT_SHIFT     &kp LCTRL         &kp LEFT_ALT     &kp LEFT_WIN  &trans
+&trans      &kp LG(LEFT_ARROW)  &trans          &kp LG(UP_ARROW)  &kp LG(RIGHT)  &kp LS(LG(GRAVE))                    &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_NEXT    &trans
+&trans      &trans              &trans          &trans            &trans         &trans             &trans    &trans  &trans          &trans             &trans            &trans           &trans        &trans
+&trans      &trans              &trans          &trans            &trans         &trans             &trans    &trans  &trans          &trans             &trans            &trans           &trans        &trans
             >;
         };
 
